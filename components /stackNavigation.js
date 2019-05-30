@@ -1,9 +1,13 @@
 import React, { Component } from 'react'; 
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import Stories from './stories';
+import Preview from './preview';
 
 const StackNav = createStackNavigator(
-    { stories : {screen : Stories}},{
+  {
+    preview : {screen : Preview},
+    stories : {screen : Stories}
+  },{
         headerMode: "none",
         mode: "modal",
         defaultNavigationOptions: {
