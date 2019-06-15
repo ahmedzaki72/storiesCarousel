@@ -33,7 +33,7 @@ class Preview extends Component {
             <View style={styles.container}>
                 {carouseles.map((item, index) => {
                     return (
-                        <TouchableOpacity onPress={() => console.log('work')} key={index}   style={{ width: 100, height: 150 ,borderColor: 'white', borderWidth: 2 ,overflow: 'hidden' }}>
+                        <TouchableOpacity onPress={() =>this.props.navigation.navigate('stories' , { data : this.state.carouseles })} key={index}   style={{ width: 100, height: 150 ,borderColor: 'white', borderWidth: 2 ,overflow: 'hidden' }}>
                             <Image
                                 style={{ width: 100, height: 150}}
                                 source={{ uri: item.image }}
