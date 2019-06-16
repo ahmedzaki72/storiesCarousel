@@ -5,3 +5,7 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
+*.components .zip
+
+
+*.const { id, image } = this.props.navigation.state.params
