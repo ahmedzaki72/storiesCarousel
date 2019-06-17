@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Dimensions, ActivityIndicator, TouchableOpacity, Image } from 'react-native';
 
+
 const { width, height } = Dimensions.get("window");
 
 class Preview extends Component {
@@ -32,14 +33,11 @@ class Preview extends Component {
         return (
             <View style={styles.container}>
                 {carouseles.map((item, index) => {
-                    console.log(item.image.map( (ele , index)=> {
-                       return ele 
-                    }))
                     return (
                         <TouchableOpacity onPress={() =>this.props.navigation.navigate('stories' , {id :item.id , image : item.image})} key={index}   style={{ width: 100, height: 150 ,borderColor: 'white', borderWidth: 2 ,overflow: 'hidden' }}>
                             <Image
                                 style={{ width: 100, height: 150}}
-                                source={{ uri: "https://balkanweb.com/wp-content/uploads/2016/12/1265104-27293699-2560-1440.jpg"}}
+                                source={{ uri: item.image[0]}}
                                 resizeMode='cover'
                             />
                         </TouchableOpacity>

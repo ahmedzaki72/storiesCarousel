@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Dimensions, ActivityIndicator, ImageBackground } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 
-
 const { width, height } = Dimensions.get("window");
 
 class Stories extends Component {
@@ -16,7 +15,8 @@ class Stories extends Component {
   }
 
   componentWillMount = () => {
-    this.setState({images : [this.props.navigation.state.params]});
+    const data = this.props.navigation.state.params.image
+    this.setState({images : data});
   }
 
   _renderItem({ item, index }) {
@@ -24,7 +24,7 @@ class Stories extends Component {
       <View style={styles.container}>
         <ImageBackground
           style={{ width: width, height: height }}
-          source={{ uri: item.image }}
+          source={{ uri: item }}
         >
           <Text style={{ textAlign: 'center', color: 'white', marginTop: height * 0.5, fontSize: 40, fontWeight: 'bold' }}>this is photo stories </Text>
         </ImageBackground>
@@ -33,7 +33,6 @@ class Stories extends Component {
   }
   render() {
     const { ready , images } = this.state
-    console.log('this is setstate image' ,images)
     if (!ready) {
       return (
         <View style={styles.container1}>
