@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Dimensions, ActivityIndicator, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, ActivityIndicator, TouchableOpacity, Image} from 'react-native';
 
 
 const { width, height } = Dimensions.get("window");
@@ -21,6 +21,7 @@ class Preview extends Component {
     componentDidMount = () => {
         this.setState({ready : true})
     }
+    
     render() {
         const { ready, carouseles } = this.state
         if (!ready) {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Dimensions, ActivityIndicator, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, ActivityIndicator, ImageBackground , StatusBar} from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 
 const { width, height } = Dimensions.get("window");
@@ -22,6 +22,7 @@ class Stories extends Component {
   _renderItem({ item, index }) {
     return (
       <View style={styles.container}>
+      <StatusBar hidden />
         <ImageBackground
           style={{ width: width, height: height }}
           source={{ uri: item }}
