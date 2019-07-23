@@ -9,3 +9,10 @@ npm-debug.*
 
 
 *.const { id, image } = this.props.navigation.state.params
+
+
+#  <View style={{width: width, alignItems: "flex-end", backgroundColor: "red", padding: 24}}>
+#           <TouchableOpacity onPress={() => console.log('work')} style={{hitSlop:{right: 20, left: 20, up: 20, down: 20}}}>
+#                      <Text style={{color: "#fff"}}>X</Text>
+#           </TouchableOpacity>
+#           </View>
